@@ -31,5 +31,8 @@
     "jsdom": "^13.1",
     "matcha": "^0.6.0",
     "mocha": "^2.2.*"
+  },
+  "dependencies": {
+    "superagent": "^4.1.0"
   }
 }

@@ -1,8 +1,11 @@
 import { ReadabilityExtractor } from "./Extractor";
+import { DefaultReader } from "./Reader";
 
-function main(url: string) {
+async function main(url: string) {
+    var reader = new DefaultReader()
     var extractor = new ReadabilityExtractor()
-    var article = extractor.extractInformation(url)
+    var body = await reader.read(url)
+    var article = extractor.extractInformation(body)
     console.log(article)
 }
 
